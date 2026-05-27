@@ -26,7 +26,8 @@
     <header>
         <a href="index.html"><h1 class="saira-semi-condensed-extrabold"> that coffee company </h1> </a>
         <div class="header-icons">
-            <a href="cart.html">
+            <a href="cart.html" class="cart-link">
+                <span id="cart-badge" style="display: none;">0</span>
                 <img src="images/cart.png" alt="Menu" width="40" height="40">
             </a>
                 <img src="images/hamb.png" alt="Menu" width="40" height="40">
@@ -37,9 +38,12 @@
 
 
 <!-- HERO IMAGE -->
-    <section class="hero-image">
+    <section>
     
-        <img src="images/heroimage.png">
+        <picture class="hero-image">
+            <source srcset="images/heroimage.png" media="(min-width: 1440px)" class="hero-image">
+            <img src="images/heroimageIOS.png" class="hero-ios">
+        </picture>
 
         <div class="hero-button">
             <a href="allproducts.html"> <button class="allproduct-btn"> <h1 class="saira-semi-condensed-medium">explore our range</h1> </button> </a> 
@@ -52,54 +56,101 @@
 
 <!-- BESTSELLER CAROUSEL -->
     <h2 class="saira-semi-condensed-extrabold"> bestsellers </h2>
-    <h3> scrolling showcase of poducts 
-        <a href="phproduct1.html"> 1</a>, 
-        <a href="phproduct2.html"> 2</a> and 
-        <a href="phproduct3.html"> 3 </a></h3>
-    
+
+    <div class="carousel-container">
+        <button id-"prevBtn" class="nav-btn" type="button">❮</button>
+        <div class="carousel-view">
+            <div class="product-list">
+            </div>
+        </div>
+        <button id="nextBtn" class="nav-btn" type="button">❯</button>
+    </div>
 
 
 
 
 <!-- CATEGORIES -->
     <h2 class="saira-semi-condensed-extrabold"> categories </h2>
-    <h3> 6 category buttons, all lead to<a href="placeholder.html"> placeholder page </a> </h3>
+    <section class="category-grid-container">
 
-    <div class="button-grid">
-        <button class="cat-btn cat1-btn"><h1 class="saira-semi-condensed-medium">beans & ground</h1></button>
-        <button class="cat-btn cat2-btn"><h1 class="saira-semi-condensed-medium">decaf coffee</h1></button>
-        <button class="cat-btn cat3-btn"><h1 class="saira-semi-condensed-medium">other drinks</h1></button>
-        <button class="cat-btn cat4-btn"><h1 class="saira-semi-condensed-medium">brewing accessories</h1></button>
-        <button class="cat-btn cat5-btn"><h1 class="saira-semi-condensed-medium">merchandise</h1></button>
-        <button class="cat-btn cat6-btn"><h1 class="saira-semi-condensed-medium">bundles</h1></button>
-    </div>
+        <button class="grid-btn" style="background-image: url('images/cat1.png');">
+            <a href="placeholder.html"><h3 class="saira-semi-condensed-medium">beans & ground</h3></a>
+        </button>
+
+        <button class="grid-btn" style="background-image: url('images/cat2.png');">
+            <a href="placeholder.html"><h3 class="saira-semi-condensed-medium">decaf coffee</h3></a>
+        </button>
+
+        <button class="grid-btn" style="background-image: url('images/cat3.png');">
+            <a href="placeholder.html"><h3 class="saira-semi-condensed-medium">other drinks</h3></a>
+        </button>
+
+        <button class="grid-btn" style="background-image: url('images/cat4.png');">
+            <a href="placeholder.html"><h3 class="saira-semi-condensed-medium">brewing accessories</h3></a>
+        </button>
+
+        <button class="grid-btn" style="background-image: url('images/cat5.png');">
+            <a href="placeholder.html"><h3 class="saira-semi-condensed-medium">merchandise</h3></a>
+        </button>
+
+        <button class="grid-btn" style="background-image: url('images/cat6.png');">
+            <a href="placeholder.html"><h3 class="saira-semi-condensed-medium">bundles</h3></a>
+        </button>
+
+    </section>
+
 
 
 
 
 <!-- AI BARISTA -->
-    <h2 class="saira-semi-condensed-extrabold"> AI barista </h2>
-    <h3> button leads to<a href="placeholder.html"> placeholder page </a> </h3>
+    <h2 class="saira-semi-condensed-extrabold"> find your perfect blend </h2>
+    <section>
+    
+        <picture class="barista-image">
+            <source srcset="images/barista.jpg" media="(min-width: 1440px)" class="barista-image">
+            <img src="images/baristaios.jpg" class="barista-ios">
+        </picture>
 
+        <div class="barista-button">
+            <a href="placeholder.html"> <button class="barista-btn"> <h1 class="saira-semi-condensed-medium">try our AI barista</h1> </button> </a> 
+        </div>
 
+    </section>
 
 
 
 <!-- REVIEWS -->
-
     <h2 class="saira-semi-condensed-extrabold"> reviews </h2>
 
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <div class="marquee-group">
+                <img src="images/rev1.png">
+                <img src="images/rev2.png">
+                <img src="images/rev3.png">
+                <img src="images/rev4.png">
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+                <img src="images/rev1.png">
+                <img src="images/rev2.png">
+                <img src="images/rev3.png">
+                <img src="images/rev4.png">
+            </div>
+        </div>
+    </div>
 
 
 
 <!-- FOOTER -->
     <footer>
-        <h4 class="saira-semi-condensed-extrabold"> that coffee company </h4>
-            <div class="footer-icons">
-                <img src="images/email.png" alt="Menu" width="25" height="25">
-                <img src="images/send.png" alt="Menu" width="25" height="25">
-                <img src="images/phone.png" alt="Menu" width="25" height="25">
-        </div>
+        <h1 class="saira-semi-condensed-extrabold">that coffee company</h1> 
+        <div class="footer-icons">
+            <img src="images/email.png" alt="Menu" width="25" height="25">
+            <img src="images/send.png" alt="Menu" width="25" height="25">
+            <img src="images/phone.png" alt="Menu" width="25" height="25">
+        </div> <br>
+        <h4 class="saira-semi-condensed-light"> Site designed in 2026 by Alex Clarke for INFO20005 </h4> 
     </footer>
 
 </body>
