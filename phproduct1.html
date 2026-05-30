@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 
@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;500;800&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="prod-page1">
     
 <!-- HEADER -->
     <header>
@@ -23,14 +23,130 @@
                 <span id="cart-badge" style="display: none;">0</span>
                 <img src="images/cart.png" alt="Menu" width="40" height="40">
             </a>
+            <div class="hamb-trigger" id="hamb-icon">
                 <img src="images/hamb.png" alt="Menu" width="40" height="40">
+            </div>
         </div>
     </header>
 
+    <nav class="nav-dropdown" id="nav-dropdown">
+        <div class="navclose-btn" id="nav-close">✕</div>
+        <ul class="saira-semi-condensed-medium">
+            <li> <a href="allproducts.html">All Products</a></li>
+            <li> <a href="placeholder.html">About</a></li>
+            <li> <a href="placeholder.html">Contact Us</a></li>
+        </ul>
+    </nav>
 
-    <img src="images/placeholder.jpg" alt="placeholder image">
-    <h1> product 1 - coffee blend </h1>
-    <h2> <a href="cart.html"> add to cart </a></h2>
+
+
+<!-- PRODUCT GALLERY ------------------------------------->
+
+<div class="gallery-container">
+    <div class="gallery-view">
+        <div class="gallery-track">
+            <!--chuck the product pics here-->
+            <div class="gallery-item"><img src="images/number9.png"></div>
+            <div class="gallery-item"><img src="images/GALL4.png"></div>
+            <div class="gallery-item"><img src="images/GALL2.png"></div>
+            <div class="gallery-item"><img src="images/GALL3.png"></div>
+        </div>
+    </div>
+    <button id="gallery-prev" class="gallery-btn" aria-label="Previous">❮</button>
+    <button id="gallery-next" class="gallery-btn" aria-label="Next">❯</button>
+</div>
+
+
+<!-- PRODUCT INFO ------------------------------------->
+<div class="proddetails-container">
+    <div class="prodsplit-wrapper">
+
+        <div class="prod-left">
+            <h2 class="prod-title saira-semi-condensed-extrabold"> Blend Number 9 </h2>
+            <div class="prod-rating">
+                <img src="images/ratingstars.png">
+            </div>
+        </div>
+
+        <div class="prod-right">
+            <h2 class="prod-price saira-semi-condensed-extrabold"> $30.50 </h2>
+            <div class="prodaction-group">
+                <button onclick="addSelectedQuantityToCart(1)" class="product-addbtn saira-semi-condensed-medium"> Add to Cart</button>
+                <div class="qtypicker-wrapper">
+                    <button type="button" class="qtyadjust-btn" onclick="adjustProductQty(-1)">-</button>
+                    <input type="number" id="prodquantity" class="prodquantity-input saira-semi-condensed-medium" value="1" min="1" readonly>
+                    <button type="button" class="qtyadjust-btn" onclick="adjustProductQty(1)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prod-desc saira-semi-condensed-light"> 
+        <p> an awesome fuckin blend of beans and shit bruh ts is sooooooo yum u gotta buy it <br> its 250g of pure hardcore stone cold uncut raw COFFEE. u gotta buy it man</p> 
+    </div>
+</div>
+
+
+<!-- INFO TABS ------------------------------------->
+<div class="prodtabs-container">
+    <div class="tabsbutton-strip">
+        <h3 class="tab-heading active saira-semi-condensed-extrabold" onclick="switchProductTab(event, 'tab-blend')" > about this blend </h3>
+        <h3 class="tab-heading saira-semi-condensed-extrabold" onclick="switchProductTab(event, 'tab-prepare')"> how to use </h3>
+        <h3 class="tab-heading saira-semi-condensed-extrabold" onclick="switchProductTab(event, 'tab-details')"> details </h3>
+    </div>
+
+        <div class="tabscontent-viewport">
+
+            <div id="tab-blend" class="tab-panel active">
+                <div class="panel-grid">
+                    <div class="panel-text">
+                        <h4 class="saira-semi-condensed-medium">Medium-Dark Artisan Roast profile</h4>
+                        <p class="saira-semi-condensed-light">Our Blend Number 9 is carefully slow-roasted to a precise medium-dark finish. This step allows the natural sugars within the coffee cherries to fully caramelise, reducing sharp bitterness while maximizing a robust body and a rich chocolate finish.</p>
+                    </div>
+                    <div class="panel-img">
+                        <img src="images/placeholder.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-prepare" class="tab-panel">
+                <div class="panel-grid">
+                    <div class="panel-text">
+                        <h4 class="saira-semi-condensed-medium">how to prepare:</h4>
+                        <p class="saira-semi-condensed-light">put it in a pot bruh idk.</p>
+                    </div>
+                    <div class="panel-img">
+                        <img src="images/placeholder.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-details" class="tab-panel">
+                <div class="panel-grid">
+                    <div class="panel-text">
+                        <h4 class="saira-semi-condensed-medium">nutritional info and stuff</h4>
+                        <p class="saira-semi-condensed-light">yep</p>
+                    </div>
+                    <div class="panel-img">
+                        <img src="images/placeholder.jpg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</div>
+
+
+    <h2 class="saira-semi-condensed-extrabold"> similar items </h2>
+
+    <div class="carousel-container">
+        <button id="prevBtn" class="nav-btn" type="button">❮</button>
+        <div class="carousel-view">
+            <div class="product-list">
+            </div>
+        </div>
+        <button id="nextBtn" class="nav-btn" type="button">❯</button>
+    </div>
+
 
 <!-- FOOTER -->
     <footer>
