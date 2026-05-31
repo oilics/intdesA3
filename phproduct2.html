@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 
@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;500;800&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="prod-page2">
     
 <!-- HEADER -->
     <header>
@@ -23,14 +23,132 @@
                 <span id="cart-badge" style="display: none;">0</span>
                 <img src="images/cart.png" alt="Menu" width="40" height="40">
             </a>
+            <div class="hamb-trigger" id="hamb-icon">
                 <img src="images/hamb.png" alt="Menu" width="40" height="40">
+            </div>
         </div>
     </header>
 
+    <nav class="nav-dropdown" id="nav-dropdown">
+        <div class="navclose-btn" id="nav-close">✕</div>
+        <ul class="saira-semi-condensed-medium">
+            <li> <a href="allproducts.html">All Products</a></li>
+            <li> <a href="placeholder.html">About</a></li>
+            <li> <a href="placeholder.html">Contact Us</a></li>
+        </ul>
+    </nav>
 
-    <img src="images/placeholder.jpg" alt="placeholder image">
-    <h1> product 2 - coffee blend </h1>
-    <h2> <a href="cart.html"> add to cart </a></h2>
+
+
+<!-- PRODUCT GALLERY ------------------------------------->
+
+<div class="gallery-container">
+    <div class="gallery-view">
+        <div class="gallery-track">
+            <!--chuck the product pics here-->
+            <div class="gallery-item"><img src="images/houseblend.png"></div>
+            <div class="gallery-item"><img src="images/GALL4.png"></div>
+            <div class="gallery-item"><img src="images/GALL2.png"></div>
+            <div class="gallery-item"><img src="images/GALL3.png"></div>
+        </div>
+    </div>
+    <button id="gallery-prev" class="gallery-btn" aria-label="Previous">❮</button>
+    <button id="gallery-next" class="gallery-btn" aria-label="Next">❯</button>
+</div>
+
+
+<!-- PRODUCT INFO ------------------------------------->
+<div class="proddetails-container">
+    <div class="prodsplit-wrapper">
+
+        <div class="prod-left">
+            <h2 class="prod-title saira-semi-condensed-extrabold"> Autumn Seasonal Blend </h2>
+            <div class="prod-rating">
+                <img src="images/ratingstars.png">
+            </div>
+        </div>
+
+        <div class="prod-right">
+            <h2 class="prod-price saira-semi-condensed-extrabold"> $34.99 </h2>
+            <div class="prodaction-group">
+                <button onclick="addSelectedQuantityToCart(1)" class="product-addbtn saira-semi-condensed-medium"> Add to Cart</button>
+                <div class="qtypicker-wrapper">
+                    <button type="button" class="qtyadjust-btn" onclick="adjustProductQty(-1)">-</button>
+                    <input type="number" id="prodquantity" class="prodquantity-input saira-semi-condensed-medium" value="1" min="1" readonly>
+                    <button type="button" class="qtyadjust-btn" onclick="adjustProductQty(1)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prod-desc saira-semi-condensed-light"> 
+        <p> A rich Colombian coffee base delivering a full, satisfying body with smooth dark‑chocolate notes, 
+            complemented by the sweetness of Brazil Yellow Bourbon and the clean, balanced finish of a specialty Costa Rican coffee. 
+            The result is an espresso blend with a long, rounded finish—perfect for a sweeter, smoother short black or macchiato, 
+            full of flavour and topped with a beautiful crema. <br> For milk drinkers, this blend cuts through effortlessly, leaving a long, pleasant aftertaste. 
+            It’s easy‑drinking, well‑balanced, and carries just the right amount of punch.</p> 
+    </div>
+</div>
+
+
+<!-- INFO TABS ------------------------------------->
+<div class="prodtabs-container">
+    <div class="tabsbutton-strip">
+        <h3 class="tab-heading active saira-semi-condensed-extrabold" onclick="switchProductTab(event, 'tab-blend')" > about this blend </h3>
+        <h3 class="tab-heading saira-semi-condensed-extrabold" onclick="switchProductTab(event, 'tab-prepare')"> how to use </h3>
+        <h3 class="tab-heading saira-semi-condensed-extrabold" onclick="switchProductTab(event, 'tab-details')"> details </h3>
+    </div>
+
+        <div class="tabscontent-viewport">
+
+            <div id="tab-blend" class="tab-panel active">
+                <div class="panel-grid">
+                    <div class="panel-text">
+
+                        <p class="saira-semi-condensed-light"><b>Origin:</b> Oporapa, Huila, Colombia <br> <b>Roast:</b> Espresso - medium roast 
+                            <br><b>Flavour Profile:</b> Brown sugar, vanilla, citrus, chocolate. Rich and sweet. <br><b>Process:</b> Washed
+                            <br><b>Varieties:</b> Caturra, Colombia & Castillo <br> <b>Altitude:</b> 1,250 - 1,900 metres above sea level <br> <b>Importer:</b> Caravela</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-prepare" class="tab-panel">
+                <div class="panel-grid">
+                    <div class="panel-text">
+                        <p class="saira-semi-condensed-light"><b>Dose:</b> 20-25g <br><b>Yield:</b> 46-52g <br><b>Process:</b> 26-32s
+                        <br> <b>Grind:</b> Fine <br> For a traditional Italian-style result, pull toward the shorter end, 46g yield in 26 seconds gives you a dense, 
+                        intense shot with thick crema. If it tastes bitter or over-extracted, go slightly coarser or shorten the time.</p>
+                    </div>
+                    <div class="panel-img">
+                        <img src="images/espresso.png">
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-details" class="tab-panel">
+                <div class="panel-grid">
+                    <div class="panel-text">
+                        <p class="saira-semi-condensed-light"><b>Product Weight:</b> 750g<br></p> 
+                    </div>
+                    <div class="panel-img">
+                        <img src="images/nutrition.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</div>
+
+
+    <h2 class="saira-semi-condensed-extrabold"> similar items </h2>
+
+    <div class="carousel-container">
+        <button id="prevBtn" class="nav-btn" type="button">❮</button>
+        <div class="carousel-view">
+            <div class="product-list">
+            </div>
+        </div>
+        <button id="nextBtn" class="nav-btn" type="button">❯</button>
+    </div>
 
 
 <!-- FOOTER -->

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 
@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;500;800&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="prod-page4">
     
 <!-- HEADER -->
     <header>
@@ -23,14 +23,124 @@
                 <span id="cart-badge" style="display: none;">0</span>
                 <img src="images/cart.png" alt="Menu" width="40" height="40">
             </a>
+            <div class="hamb-trigger" id="hamb-icon">
                 <img src="images/hamb.png" alt="Menu" width="40" height="40">
+            </div>
         </div>
     </header>
 
+    <nav class="nav-dropdown" id="nav-dropdown">
+        <div class="navclose-btn" id="nav-close">✕</div>
+        <ul class="saira-semi-condensed-medium">
+            <li> <a href="allproducts.html">All Products</a></li>
+            <li> <a href="placeholder.html">About</a></li>
+            <li> <a href="placeholder.html">Contact Us</a></li>
+        </ul>
+    </nav>
 
-    <img src="images/placeholder.jpg" alt="placeholder image">
-    <h1> product 3 - tote bag </h1>
-    <h2> <a href="cart.html"> add to cart </a></h2>
+
+
+<!-- PRODUCT GALLERY ------------------------------------->
+
+<div class="gallery-container">
+    <div class="gallery-view">
+        <div class="gallery-track">
+            <!--chuck the product pics here-->
+            <div class="gallery-item"><img src="images/tote.png"></div>
+            <div class="gallery-item"><img src="images/toteheld.png"></div>
+        </div>
+    </div>
+    <button id="gallery-prev" class="gallery-btn" aria-label="Previous">❮</button>
+    <button id="gallery-next" class="gallery-btn" aria-label="Next">❯</button>
+</div>
+
+
+<!-- PRODUCT INFO ------------------------------------->
+<div class="proddetails-container">
+    <div class="prodsplit-wrapper">
+
+        <div class="prod-left">
+            <h2 class="prod-title saira-semi-condensed-extrabold"> TCC Tote Bag </h2>
+            <div class="prod-rating">
+                <img src="images/ratingstars.png">
+            </div>
+        </div>
+
+        <div class="prod-right">
+            <h2 class="prod-price saira-semi-condensed-extrabold"> $29.99 </h2>
+            <div class="prodaction-group">
+                <button onclick="addSelectedQuantityToCart(1)" class="product-addbtn saira-semi-condensed-medium"> Add to Cart</button>
+                <div class="qtypicker-wrapper">
+                    <button type="button" class="qtyadjust-btn" onclick="adjustProductQty(-1)">-</button>
+                    <input type="number" id="prodquantity" class="prodquantity-input saira-semi-condensed-medium" value="1" min="1" readonly>
+                    <button type="button" class="qtyadjust-btn" onclick="adjustProductQty(1)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prod-desc saira-semi-condensed-light"> 
+        <p> A versatile green tote bag designed for everyday use, combining durability with a clean, modern look. Its spacious interior 
+            and reinforced handles make it ideal for groceries, uni essentials, gym gear, or daily commuting. Lightweight yet sturdy, 
+            this tote offers a practical, eco‑friendly alternative to disposable bags while adding a pop of colour to your routine.</p> 
+    </div>
+</div>
+
+
+<!-- INFO TABS ------------------------------------->
+<div class="prodtabs-container">
+    <div class="tabsbutton-strip">
+        <h3 class="tab-heading active saira-semi-condensed-extrabold" onclick="switchProductTab(event, 'tab-blend')" > materials </h3>
+        <h3 class="tab-heading saira-semi-condensed-extrabold" onclick="switchProductTab(event, 'tab-prepare')"> specifications </h3>
+
+    </div>
+
+        <div class="tabscontent-viewport">
+
+            <div id="tab-blend" class="tab-panel active">
+                <div class="panel-grid">
+                    <div class="panel-text">
+                       
+                        <p class="saira-semi-condensed-light">
+                            <b>Body Fabric:</b> 100% cotton canvas <br> 
+                            <b>Handles:</b>  Reinforced cotton webbing<br>
+                            <b>Inner Lining:</b> Cotton blend <br>
+                            <b>Stitching:</b> Heavy‑duty polyester thread <br>
+                            <b>Print/Colour:</b> Eco-friendly, non-toxic dyes
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-prepare" class="tab-panel">
+                <div class="panel-grid">
+                    <div class="panel-text">
+                        
+                        <p class="saira-semi-condensed-light">
+                            <b>Dimensions:</b> Approx. 38cm (H) x 35cm (W) x 10cm (D) <br> 
+                            <b>Handle Drop:</b> ~28cm<br>
+                            <b>Capacity:</b> 10-15L <br>
+                            <b>Weight:</b> ~150-220g <br>
+                            <b>Cleaning:</b> Cold hand wash recommended, air dry <br>
+                            <b>Sustainability:</b> Reusable, long‑lasting materials; reduces single‑use bag waste
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</div>
+
+
+    <h2 class="saira-semi-condensed-extrabold"> similar items </h2>
+
+    <div class="carousel-container">
+        <button id="prevBtn" class="nav-btn" type="button">❮</button>
+        <div class="carousel-view">
+            <div class="product-list">
+            </div>
+        </div>
+        <button id="nextBtn" class="nav-btn" type="button">❯</button>
+    </div>
 
 
 <!-- FOOTER -->

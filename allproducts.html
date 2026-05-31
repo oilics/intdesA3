@@ -23,25 +23,63 @@
                 <span id="cart-badge" style="display: none;">0</span>
                 <img src="images/cart.png" alt="Menu" width="40" height="40">
             </a>
+            <div class="hamb-trigger" id="hamb-icon">
                 <img src="images/hamb.png" alt="Menu" width="40" height="40">
+            </div>
         </div>
     </header>
 
+    <nav class="nav-dropdown" id="nav-dropdown">
+        <div class="navclose-btn" id="nav-close">✕</div>
+        <ul class="saira-semi-condensed-medium">
+            <li> <a href="allproducts.html">All Products</a></li>
+            <li> <a href="placeholder.html">About</a></li>
+            <li> <a href="placeholder.html">Contact Us</a></li>
+        </ul>
+    </nav>
 
-    <br>
+    <section>
+    
+        <picture class="hero-image">
+            <source srcset="images/prodbanner.png" media="(min-width: 1440px)" class="hero-image">
+            <img src="images/prodbannerIOS.png" class="hero-ios">
+        </picture>
 
-    <h2> hero image </h2>
-    <img src="images/placeholder.jpg" alt="placeholder image">
+    </section>
 
-    <br>
 
-    <h2> 
-        <a href="phproduct1.html"> placeholder product 1</a> <br>
-        <a href="phproduct2.html"> placeholder product 2</a> <br>
-        <a href="phproduct3.html"> placeholder product 3</a> 
-    </h2>
+<!-- SORT/FILTER + PRODUCTS -->
+<div class="catalog-shell">
 
-    <br>
+    <aside class="catalog-sidebar">
+        <div class="control-block">
+            <p class="control-label saira-semi-condensed-medium">Filter</p> 
+            <select class="control-dropdown saira-semi-condensed-light">
+                <option>All products</option>
+                <option>Beans & ground</option>
+                <option>Decaf</option>
+                <option>Other drinks</option>
+                <option>Brewing accessories</option>
+                <option>Merchandise</option>
+                <option>Bundles & sets</option>
+            </select>
+        </div>
+        <div class="control-block">
+            <p class="control-label saira-semi-condensed-medium">Sort</p> 
+            <select class="control-dropdown saira-semi-condensed-light">
+                <option>Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Highest Rating</option>
+            </select>
+        </div>
+    </aside>
+
+    <div class="product-list grid-layout"> </div>
+
+</div>
+
+
 
 <!-- FOOTER -->
     <footer>

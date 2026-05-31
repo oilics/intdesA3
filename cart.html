@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;500;800&display=swap" rel="stylesheet">
 
 </head>
+
+
+
 <body>
     
 <!-- HEADER -->
@@ -23,14 +26,41 @@
                 <span id="cart-badge" style="display: none;">0</span>
                 <img src="images/cart.png" alt="Menu" width="40" height="40">
             </a>
+            <div class="hamb-trigger" id="hamb-icon">
                 <img src="images/hamb.png" alt="Menu" width="40" height="40">
+            </div>
         </div>
     </header>
 
+    <nav class="nav-dropdown" id="nav-dropdown">
+        <div class="navclose-btn" id="nav-close">✕</div>
+        <ul class="saira-semi-condensed-medium">
+            <li> <a href="allproducts.html">All Products</a></li>
+            <li> <a href="placeholder.html">About</a></li>
+            <li> <a href="placeholder.html">Contact Us</a></li>
+        </ul>
+    </nav>
 
-    <h2> products added by user </h2>
-    <br>
-    <h2> <a href="checkout.html"> checkout now </a></h2>
+
+<!-- CART -->
+
+    <h2 class="saira-semi-condensed-extrabold"> your cart </h2>
+
+<main class="cart-wrapper">
+    <section id="cart-container"></section>
+    <section class="csummary-column">
+        <div class="summary-total">
+            <span class="saira-semi-condensed-medium" >Total:</span>
+            <span id="cart-total" class="saira-semi-condensed-medium">$0.00</span>
+        </div>
+        <a href="checkout.html" class="checkout-link">
+            <button class="checkout-btn saira-semi-condensed-medium" onclick="checkEmptyCart(event)">Proceed to Checkout</button>
+        </a>
+    </section>
+</main>
+
+
+
 
 <!-- FOOTER -->
     <footer>
@@ -42,6 +72,7 @@
         </div> <br>
         <h4 class="saira-semi-condensed-light"> Site designed in 2026 by Alex Clarke for INFO20005 </h4> 
     </footer>
-
 </body>
 </html>
+
+
