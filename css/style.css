@@ -248,7 +248,7 @@ header {
     max-width: 1400px;
     margin: 40px auto;
     padding: 0 10px;
-
+    margin-bottom: 60px;
 }
     .carousel-view {
         overflow: hidden;
@@ -349,6 +349,8 @@ header {
             scroll-snap-type: x mandatory;
             -ms-overflow-style: none;
             scrollbar-width: none;
+            margin-bottom: 20px;
+            margin-top: -10px;
         }
         .carousel-view::-webkit-scrollbar {
             display: none;
@@ -377,6 +379,7 @@ header {
     margin: 60px auto;
     padding: 0 5%;
     margin-bottom: 100px;
+    margin-top: 25px;
 }
 .grid-btn {
     position: relative;
@@ -398,7 +401,8 @@ header {
     .category-grid-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        margin: 40px auto;
+        margin-bottom: 70px;
+        margin-top: 20px;
     }
     .grid-btn {
         height: 140px;
@@ -447,7 +451,7 @@ header {
 .marquee-container {
     overflow: hidden;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0px;
     background: transparent;
     position: relative;
@@ -456,7 +460,7 @@ header {
 .marquee-track {
     display: flex;
     width: max-content;
-    animation: slowScroll 30s linear infinite;
+    animation: slowScroll 40s linear infinite;
 }
 
 .marquee-group {
@@ -478,10 +482,30 @@ header {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100vw);
+        transform: translateX(-50%);
     }
 }
 
+@media (max-width: 700px) {
+    .marquee-container {
+        max-height: 400px;
+    }
+    .marquee-group img {
+        height: 300px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    .marquee-group {
+        gap: 0px;
+        padding-right: 0px;
+        justify-content: flex-start;
+    }
+    .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: slowScroll 10s linear infinite;
+    }
+}
 
 
 
